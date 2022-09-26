@@ -1,11 +1,10 @@
 node {
     try {
         stage('checkout'){
-            echo "checking out scm"
-            if (env.BRANCH_NAME == 'main'){
-                echo "This is the master/$env.BRANCH_NAME branch!"
+            if (env.BRANCH_NAME == 'master') {
+            echo 'I only execute on the master branch'
             } else {
-                ehco "This is a non-prod branch"
+                echo 'I execute elsewhere'
             }
         }
         stage('Quality Test') {
