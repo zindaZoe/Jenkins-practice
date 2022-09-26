@@ -2,7 +2,7 @@ node {
     try {
         stage('checkout'){
             if (env.BRANCH_NAME == 'main') {
-                echo 'Running on the ${env.BRANCH_NAME}/prod branch'
+                echo "Running on the ${env.BRANCH_NAME}/prod branch"
             } else {
                 echo 'Running on a non-prod branch'
             }
